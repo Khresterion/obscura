@@ -2,7 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyDSHpkYSzUlsdiRXffY4lJmVb4AOAzYXJ4",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "isla-obscura.firebaseapp.com",
   projectId: "isla-obscura",
   storageBucket: "isla-obscura.appspot.com",

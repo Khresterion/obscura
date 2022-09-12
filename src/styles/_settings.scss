@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
 
-$color1: rgb(211, 27, 57);
+$color1: #3c096c;
 $black1: rgb(28, 28, 28);
 $black2: rgb(49, 49, 49);
 $black3: rgb(70, 70, 70);
@@ -18,7 +21,7 @@ $shadow: 0 3px 20px rgba(0, 0, 0, 0.356);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Fredoka", sans-serif;
+  font-family: "Work sans", sans-serif;
 }
 
 body {
@@ -33,6 +36,7 @@ input[type="submit"] {
   cursor: pointer;
   background: $color1;
   transition: 0.2s;
+  color: $white;
 
   &:hover {
     filter: brightness(80%);
@@ -48,4 +52,9 @@ textarea {
   margin: 5px;
   padding: 8px;
   background: $white;
+}
+
+h3 {
+  font-family: "Megrim", sans-serif;
+  text-transform: uppercase;
 }
