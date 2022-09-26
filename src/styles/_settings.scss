@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
 
-$color1: rgb(211, 27, 57);
+$color1: rgb(236, 44, 76);
 $black1: rgb(28, 28, 28);
 $black2: rgb(49, 49, 49);
 $black3: rgb(70, 70, 70);
@@ -15,7 +15,8 @@ $shadow: 0 3px 20px rgba(0, 0, 0, 0.356);
 }
 
 * {
-  margin: 0;
+  text-align: center;
+  margin: center;
   padding: 0;
   box-sizing: border-box;
   font-family: "Fredoka", sans-serif;
@@ -29,10 +30,11 @@ body {
 button,
 input[type="submit"] {
   background: none;
-  border: none;
+  border-radius: 5px;
   cursor: pointer;
   background: $color1;
   transition: 0.2s;
+  font-size: 200%;
 
   &:hover {
     filter: brightness(80%);
