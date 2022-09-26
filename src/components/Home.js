@@ -9,12 +9,13 @@ import { useHistory } from "react-router-dom";
 
 export const Home = () => {
   // stockage des valeurs de la desc apres clique dans local storage
-  let setVal = (values) => {
-    obscuraAxios.put('api/getDescription', values).then( res => {
+  let setVal = async (values) => {
+    await obscuraAxios.put('api/getDescription', values).then(res => {
       let desc = res.data
       // faire un check au back si input == code
       let descStringified = JSON.stringify(desc)
       localStorage.setItem('descriptionValues', descStringified)
+      location.reload()
     })
   }
 
@@ -26,6 +27,8 @@ export const Home = () => {
     .max(4, 'Maximum 4 charactères')
   })
 
+  
+
   return (
       <div>
         <Formik 
@@ -36,7 +39,7 @@ export const Home = () => {
           onSubmit={values => {
             console.log(" *** code validated by formik *** ")
             setVal(values)
-            {history.push('/LieuDescription')}
+            {history.push('/LieuDescription')}      
           }}>
 
           <Form>
